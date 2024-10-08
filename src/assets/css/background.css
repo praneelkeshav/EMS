@@ -1,0 +1,21 @@
+/* Add background to header */
+.header-section {
+    background-color: #1f1f1f; /* Example dark background */
+    padding: 20px; /* Adjust padding if needed */
+    color: #fff; /* Ensure text remains visible */
+  }
+  
+  /* Add background for the section below the header */
+  .content-section {
+    background-color: #333; /* Adjust color */
+    padding: 20px;
+    border-radius: 10px; /* Optional for rounded corners */
+  }
+/* Header with image background */
+.header-section {
+    background-image: url('/path-to-image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Make sure image covers entire area */
+    background-position: center; /* Center the image */
+    color: #fff; /* Ensure text contrast */
+  }
+    

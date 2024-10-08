@@ -1,0 +1,35 @@
+.dynamic-login-btn {
+  background: linear-gradient(45deg, #ffffff, #ffffff);
+  color: rgb(0, 0, 0);
+  border: 3px;
+  padding: 15px 25px;
+  font-size: 20px;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center; /* Aligns content vertically */
+  justify-content: center; /* Centers content horizontally */
+  width: 100%;
+}
+
+
+/* Add background to header */
+.header-section {
+  background-color: #1f1f1f; /* Example dark background */
+  padding: 20px; /* Adjust padding if needed */
+  color: #fff; /* Ensure text remains visible */
+}
+
+/* Add background for the section below the header */
+.content-section {
+  background-color: #333; /* Adjust color */
+  padding: 20px;
+  border-radius: 10px; /* Optional for rounded corners */
+}
+
+
+.dynamic-login-btn:hover {
+  background: linear-gradient(45deg, #ffffff, #ffffff);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
