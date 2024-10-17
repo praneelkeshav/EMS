@@ -3,8 +3,8 @@ import { Container, Row, Col, Card, ProgressBar } from 'react-bootstrap';
 import { FaBatteryFull, FaBolt, FaTemperatureHigh } from 'react-icons/fa';
 import GaugeChart from 'react-gauge-chart';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import axios from 'axios';
-import { FaChargingStation } from 'react-icons/fa';
+// import axios from 'axios';
+// import { FaChargingStation } from 'react-icons/fa';
 
 // Sample Data (Replace with real-time data later)
 const mockBatteryData = {
@@ -62,7 +62,7 @@ const App = () => {
 
         {/* Enhanced Battery Voltage and Current Card */}
         <Col md={6}>
-          <Card className="p-5 mb-3" style={{ borderRadius: '15px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+          <Card className="p-5 mb-4" style={{ borderRadius: '15px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
             <h4 className="text-center mb-4">Battery Voltage and Current</h4>
             <div className="d-flex justify-content-around align-items-center" style={{ height: '100%' }}>
               {/* Voltage Section */}

@@ -1,0 +1,29 @@
+.custom-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+  }
+  
+  .custom-card-header {
+    background-color: #6ABA9F; /* Eco-friendly green header */
+    color: white;
+  }
+  
+  .custom-table {
+    background-color: #F9F9F9; /* Soft background color */
+    border-radius: 8px;
+  }
+  
+  .custom-table thead th {
+    background-color: #FFD400; /* Yellow header */
+    color: black;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #EFEFEF; /* Alternate row color */
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #D3F5E8; /* Light green on hover */
+  }
+  

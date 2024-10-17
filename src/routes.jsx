@@ -52,7 +52,7 @@ const routes = [
     routes: [
       {
         exact: 'true',
-        path: '/app/dashboard/default',
+        path: '/dashboard',
         element: lazy(() => import('./views/dashboard'))
       },
       {
@@ -88,28 +88,38 @@ const routes = [
       },
       {
         exact: 'true',
-        path: '/forms/form-basic',
-        element: lazy(() => import('./views/forms/FormsElements'))
+        path: '/monitor/buildingoverview',
+        element: lazy(() => import('./views/Monitor/pages/overview'))
       },
       {
         exact: 'true',
-        path: '/tables/bootstrap',
-        element: lazy(() => import('./views/tables/BootstrapTable'))
+        path: '/monitor/cooling',
+        element: lazy(() => import('./views/Monitor/pages/cooling'))
       },
       {
         exact: 'true',
-        path: '/charts/nvd3',
-        element: lazy(() => import('./views/charts/nvd3-chart'))
+        path: '/monitor/renewable',
+        element: lazy(() => import('./views/Monitor/pages/renewables'))
       },
       {
         exact: 'true',
-        path: '/maps/google-map',
-        element: lazy(() => import('./views/maps/GoogleMaps'))
+        path: '/monitor/energystorage',
+        element: lazy(() => import('./views/Monitor/pages/energystorage'))
       },
       {
         exact: 'true',
-        path: '/sample-page',
-        element: lazy(() => import('./views/extra/SamplePage'))
+        path: '/optimize/kvavskw',
+        element: lazy(() => import('./views/Optimize/kva/kvsvskw'))
+      },
+      {
+        exact: 'true',
+        path: '/monthlyreports',
+        element: lazy(() => import('./views/monthlyreports/monthlyreports'))
+      },
+      {
+        exact: 'true',
+        path: '/alerts',
+        element: lazy(() => import('./views/alerts/alerts'))
       },
       {
         path: '*',

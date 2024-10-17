@@ -1,57 +1,73 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
-const ChartComponent = () => {
-  const data = {
-    labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
-    datasets: [
+const ApparentPowerChart = () => {
+  const chartOptions = {
+    chart: {
+      type: 'column',
+    },
+    title: {
+      text: 'Percentage Of Apparent Power crossing 3900 kVA',
+    },
+    xAxis: {
+      categories: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14'],
+      title: {
+        text: null
+      }
+    },
+    yAxis: {
+      min: 0,
+      max: 100,
+      title: {
+        text: '% of Apparent Power crossing 3900 kVA',
+      },
+      labels: {
+        format: '{value}%',
+      },
+    },
+    plotOptions: {
+      column: {
+        stacking: 'percent',
+      },
+    },
+    series: [
       {
-        label: '3700 to 3800 kVA',
-        data: [0, 0, 0, 0, 0, 0, 0, 20, 25, 30, 35, 40],
-        backgroundColor: '#00FF00',
+        name: '_3900to4000',
+        data: [5, 0, 0, 0, 0, 0, 0, 10, 40, 15, 10, 30, 20, 40, 50],
+        color: '#00FF00',
       },
       {
-        label: '3800 to 3900 kVA',
-        data: [0, 0, 0, 0, 0, 0, 0, 15, 20, 25, 30, 35],
-        backgroundColor: '#FFFF00',
+        name: '_4000to4100',
+        data: [0, 0, 0, 0, 0, 0, 0, 10, 20, 10, 0, 0, 10, 20, 10],
+        color: '#32CD32',
       },
       {
-        label: '3900 to 4000 kVA',
-        data: [0, 0, 0, 0, 0, 0, 0, 10, 15, 20, 25, 30],
-        backgroundColor: '#FFA500',
+        name: '_4100to4200',
+        data: [0, 0, 0, 0, 0, 0, 0, 5, 10, 0, 0, 0, 5, 10, 5],
+        color: '#FFD700',
       },
       {
-        label: '4000 to 4100 kVA',
-        data: [0, 0, 0, 0, 0, 0, 0, 5, 10, 15, 20, 25],
-        backgroundColor: '#FF4500',
+        name: '_4200to4300',
+        data: [0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 5, 10, 5],
+        color: '#FF8C00',
       },
       {
-        label: '4100 to 4200 kVA',
-        data: [0, 0, 0, 0, 0, 0, 0, 0, 5, 10, 15, 20],
-        backgroundColor: '#FF0000',
+        name: '_4300to4400',
+        data: [0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0, 5, 10, 5],
+        color: '#8B0000',
       },
     ],
-  };
-
-  const options = {
-    scales: {
-      y: {
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Percentage (%)',
-        },
-      },
-      x: {
-        title: {
-          display: true,
-          text: 'Time (Hours)',
-        },
-      },
+    credits: {
+      enabled: false, // Hides the 'Highcharts.com' logo
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return (
+    <div>
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+    </div>
+  );
 };
 
-export default ChartComponent;
+export default ApparentPowerChart;

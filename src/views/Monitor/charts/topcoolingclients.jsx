@@ -20,7 +20,7 @@ const CoolingClientsChart = () => {
             title: {
                 text: 'Energy (kWh)'
             },
-            max: 150, // Set max limit to 400 for the Y-axis similar to the screenshot
+            max: 150, // Set max limit to 150 for the Y-axis
         },
         series: [
             {
@@ -54,9 +54,6 @@ const CoolingClientsChart = () => {
                 color: 'cyan'
             }
         ],
-        credits: {
-            enabled: false, // Disable credits (watermark)
-          },
         chart: {
             type: 'line'
         },
@@ -74,7 +71,6 @@ const CoolingClientsChart = () => {
                 }
             }]
         }
-        
     });
 
     useEffect(() => {
@@ -96,7 +92,6 @@ const CoolingClientsChart = () => {
                 series: newSeriesData,
                 title: { text: `TOP Cooling Clients for ${formattedDate}` }
             }));
-            
         };
 
         fetchDataForClient(selectedDate, selectedClient);

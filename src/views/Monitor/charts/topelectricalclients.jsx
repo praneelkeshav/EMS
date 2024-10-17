@@ -36,9 +36,6 @@ const DynamicLineChart = () => {
                 color: 'green'
             }
         ],
-        credits: {
-            enabled: false, // Disable credits (watermark)
-          },
         chart: {
             type: 'line'
         },

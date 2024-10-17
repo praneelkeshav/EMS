@@ -8,7 +8,7 @@ const Client = () => {
     <React.Fragment>
       {/* First Row with Electrical Clients */}
       <Row className="mb-5"> {/* Added margin-bottom class to create gap */}
-        <Col lg={12}>
+        <Col className="btn-page">
           <Card className="p-4 card-social h-100 w-100" style={{ borderRadius: '35px' }}>
             <div>
               <DynamicLineChart

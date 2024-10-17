@@ -34,7 +34,7 @@ const menuItems =
           title: 'Dashboard',
           type: 'item',
           icon: <HomeOutlined />,
-          url: '/app/dashboard/default'
+          url: '/dashboard'
         },
         {
           id: 'component',
@@ -47,7 +47,7 @@ const menuItems =
               title: 'Building Overview',
               type: 'item',
               icon:<SignalCellularAltOutlinedIcon />,
-              url: '/basic/button'
+              url: '/monitor/buildingoverview'
             },
             {
               id: 'client',
@@ -61,14 +61,14 @@ const menuItems =
               title: 'Cooling/HVAC',
               type: 'item',
               icon: <AcUnitIcon />,
-              url: '/basic/breadcrumb-paging'
+              url: '/monitor/cooling'
             },
             {
               id: 'collapse',
               title: 'Renewable energy',
               type: 'item',
               icon: <SolarPowerIcon />,
-              url: '/basic/collapse'
+              url: '/monitor/renewable'
             },
             {
               id: 'tabs-pills',
@@ -82,7 +82,7 @@ const menuItems =
               title: 'Energy Storage',
               type: 'item',
               icon:<SignalCellularAltOutlinedIcon />,
-              url: '/basic/typography'
+              url: '/monitor/energystorage'
             },
             {
               id: 'common-areas',
@@ -135,7 +135,7 @@ const menuItems =
               title: 'kVA vs KW',
               type: 'item',
               icon: <CandlestickChartIcon />,
-              url: '/controls/battery'
+              url: '/optimize/kvavskw'
             },
           ]
         },
@@ -151,14 +151,14 @@ const menuItems =
           title: 'Monthly Reports',
           type: 'item',
           icon: <SummarizeOutlinedIcon />,
-          url: '/tables/bootstrap'
+          url: '/monthlyreports'
         },
         {
           id: 'alert',
           title: 'Alerts / Notifications',
           type: 'item',
           icon: <ReportProblemIcon />,
-          url: '/tables/bootstrap'
+          url: '/alerts'
         }
       ]
     }
