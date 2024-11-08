@@ -26,12 +26,15 @@ const EnergySourceChart = () => {
       title: {
         text: null,
       },
+      gridLineWidth: 0, // Removes x-axis grid lines
     },
     yAxis: {
       min: 0,
       title: {
         text: 'Energy (kWh)',
+        align: 'high',
       },
+      gridLineWidth: 0, // Removes y-axis grid lines
       stackLabels: {
         enabled: true,
         style: {
@@ -47,8 +50,8 @@ const EnergySourceChart = () => {
       column: {
         stacking: 'normal',
         depth: 100,
-        pointPadding:0.4,
-        groupPadding:0.1
+        pointPadding: 0.4,
+        groupPadding: 0.1,
       },
     },
     series: [

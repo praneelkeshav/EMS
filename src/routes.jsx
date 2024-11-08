@@ -122,6 +122,31 @@ const routes = [
         element: lazy(() => import('./views/alerts/alerts'))
       },
       {
+        exact: 'true',
+        path: '/iotfleetstatus',
+        element: lazy(() => import('./views/iotstatus/iot'))
+      },
+      {
+        exact: 'true',
+        path: '/emissions/scope1',
+        element: lazy(() => import('./views/emissions/scope1'))
+      },
+      {
+        exact: 'true',
+        path: '/emissions/scope2',
+        element: lazy(() => import('./views/emissions/scope2'))
+      },
+      {
+        exact: 'true',
+        path: '/emissions/scope3',
+        element: lazy(() => import('./views/emissions/scope3'))
+      },
+      {
+        exact: 'true',
+        path: '/emissions/dashboard',
+        element: lazy(() => import('./views/emissions/dashboard'))
+      },
+      {
         path: '*',
         exact: 'true',
         element: () => <Navigate to={BASE_URL} />

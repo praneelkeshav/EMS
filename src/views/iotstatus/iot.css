@@ -1,0 +1,101 @@
+.single-line-diagram {
+    text-align: center;
+  }
+  
+  .device-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .device-box {
+    position: relative;
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  .device-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .device-box.active .status-dot {
+    background-color: green;
+    
+  }
+  
+  .device-box.inactive .status-dot {
+    background-color: red;
+  }
+  
+  .status-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  
+  .device-details p {
+    margin: 5px 0;
+  }
+  
+  /* Modal Styles */
+  .device-details-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    text-align: left;
+  }
+  
+  .modal-content h4 {
+    margin-top: 15px;
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .close-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .device-list {
+      flex-direction: column;
+    }
+  
+    .device-box {
+      width: 100%;
+    }
+  
+    .device-details-modal {
+      width: 90%;
+    }
+  }
+  

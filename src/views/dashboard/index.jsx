@@ -2,12 +2,14 @@ import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 import Bar from 'components/Loader/Bar';
 import PieDonutChart from 'components/Loader/PieDonutChart';
+import ChillerOverview from './chillers';
+import ChillerVisualization from './chilers2';
+import ChargerDashboard from './evcharger';
 const DashDefault = () => {
   return (
     <div>
       {/* Section with background color */}
       <div style={{ backgroundColor: '', padding: '0px' }}>
-        
         <Row>
           <Col lg={4}>
             <Card className="card-social h-100" style={{ borderRadius: '35px' }}>
@@ -34,12 +36,10 @@ const DashDefault = () => {
                   <br />
                   Suggestions For Improvement
                 </div>
-
                 <Row className="mt-auto">
                   <div className="col mt-3">
                     <button className="btn btn-primary">Connect</button>
                   </div>
-
                   <div className="col mt-3">
                     <div className="progress" style={{ height: '20px' }}>
                       <div
@@ -63,7 +63,6 @@ const DashDefault = () => {
               </Card.Body>
             </Card>
           </Col>
-
           <Col md={6} xl={4}>
             <Card className="p-4 card-social h-100" style={{ borderRadius: '35px' }}>
               <div className="d-flex justify-content-between align-items-center mb-3">
@@ -85,7 +84,6 @@ const DashDefault = () => {
                   </ul>
                 </div>
               </div>
-
               <div className="d-flex justify-content-between align-items-start flex-grow-1">
                 <div>
                   <p className="mb-0"><small>Energy</small></p>
@@ -103,41 +101,50 @@ const DashDefault = () => {
         </Row>
       </div>
 
-      {/* Vertical Bar Chart - Outside the background colored section */}
+      {/* Vertical Bar and Pie Chart */}
       <Row>
-      <Col md={8} xl={6}>
-      <Card className="p- card-social h-100 w-100 mt-5" style={{ borderRadius: '35px' }}>
-      <div className="mt-4">
-        {/* <h4>Vertical Bar Chart</h4> */}
-        <div>
-          <Bar
-            animationDuration={500}
-            progress={0.76} // 76% progress
-            direction="vertical" // Assuming the Bar component supports direction prop
-          />
-        </div>
-      </div>
-      </Card>
-      </Col>
-      <Col md={8} xl={6}>
-      <Card className="p- card-social h-100 w-100 mt-5" style={{ borderRadius: '35px' }}>
-      <div className="mt-4">
-        {/* <h4>Vertical Bar Chart</h4> */}
-        <div>
-          <PieDonutChart
-            animationDuration={500}
-            progress={0.76} // 76% progress
-            direction="vertical" // Assuming the Bar component supports direction prop
-          />
-        </div>
-      </div>
-      </Card>
-      </Col>
+        <Col md={8} xl={6}>
+          <Card className="p-4 card-social h-100 w-100 mt-5" style={{ borderRadius: '35px' }}>
+            <div className="mt-4">
+              <Bar
+                animationDuration={500}
+                progress={0.76}
+                direction="vertical"
+              />
+            </div>
+          </Card>
+        </Col>
+        <Col md={8} xl={6}>
+          <Card className="p-4 card-social h-100 w-100 mt-5" style={{ borderRadius: '35px' }}>
+            <div className="mt-4">
+              <PieDonutChart
+                animationDuration={500}
+                progress={0.76}
+              />
+            </div>
+          </Card>
+        </Col>
+      </Row>
 
-      
+      {/* Chiller Overview Section */}
+      <Row className="mt-5">
+        <Col>
+        <Card className="p-4 card-social h-100 w-100 mt-5" style={{ borderRadius: '35px' }}>
+          <ChillerVisualization />
+          </Card>
+        </Col>
+      </Row>
+      <Row className="mt-5">
+        <Col>
+        <Card className="p-4 card-social w-100 mt-5" style={{ borderRadius: '35px' }}>
+          <ChargerDashboard />
+          </Card>
+          <Card className="p-4 card-social w-100 mt-5"style={{ borderRadius: '35px' }}>
+            <ChillerOverview />
+          </Card>
+        </Col>
       </Row>
     </div>
-    
   );
 };
 

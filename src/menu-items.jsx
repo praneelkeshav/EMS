@@ -17,9 +17,12 @@ import {
   StarHalfOutlined as StarHalfOutlinedIcon,
   OndemandVideoOutlined as OndemandVideoOutlinedIcon,
   HomeOutlined,
+
 } from "@mui/icons-material";
 import EngineeringIcon from '@mui/icons-material/Engineering';
-
+import AirOutlinedIcon from '@mui/icons-material/AirOutlined';
+import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
+import ManageHistoryIcon from '@mui/icons-material/ManageHistory';
 const menuItems = 
  {
   items: [
@@ -140,11 +143,48 @@ const menuItems =
           ]
         },
         {
+          id: 'table2',
+          title: 'Emission',
+          type: 'collapse',
+          icon: <AirOutlinedIcon />,
+          url: '/tables/bootstrap',
+          children: [
+            {
+              id: 'button2',
+              title: 'Scope 1 Analysis',
+              type: 'item',
+              icon: <OndemandVideoOutlinedIcon />,
+              url: '/emissions/scope1'
+            },
+            {
+              id: 'button2',
+              title: 'Scope 2 Analysis',
+              type: 'item',
+              icon: <ManageHistoryIcon />,
+              url: '/emissions/scope2'
+            },
+            {
+              id: 'button2',
+              title: 'Scope 3 Analysis',
+              type: 'item',
+              icon: <ManageHistoryIcon />,
+              url: '/emissions/scope3'
+            },
+            {
+              id: 'button2',
+              title: 'Emission Dashboard',
+              type: 'item',
+              icon: <AnalyticsOutlinedIcon />,
+              url: '/emissions/dashboard'
+            },
+          ]
+        },
+        {
           id: 'iot-fleet',
           title: 'IOT Fleet status / Health Status',
           type: 'item',
           icon: <AdfScannerOutlinedIcon />,
-          url: '/tables/bootstrap'
+          url: '/iotfleetstatus'
         },
         {
           id: 'monthly-report',

@@ -1,0 +1,64 @@
+.dashboard {
+    padding: 20px;
+  }
+  
+  .overview {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .stat h3 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .chargers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .charger-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .charger-icon {
+    font-size: 48px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Active Charger Icon - Green */
+  .charger-icon.active::before {
+    content: 'ev_station';
+    font-family: 'Material Icons';
+    color: green;
+  }
+  
+  /* Inactive Charger Icon - Black */
+  .charger-icon.inactive::before {
+    content: 'ev_station';
+    font-family: 'Material Icons';
+    color: black;
+  }
+  
+  .charger-details p {
+    margin: 0;
+    color: #333;
+  }
+  
